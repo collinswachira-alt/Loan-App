@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Reviews</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="loanRequest.html">Apply for Loan</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="review-section">
+            <h1>Customer Reviews</h1>
+            <div class="reviews">
+                <article class="review">
+                    <h2>Jane Doe</h2>
+                    <p>“The loan process was seamless, and I got the funds quickly. Great service!”</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </article>
+                <article class="review">
+                    <h2>John Smith</h2>
+                    <p>“The platform is user-friendly, but the interest rates could be lower.”</p>
+                    <div class="stars">⭐⭐⭐⭐</div>
+                </article>
+                <article class="review">
+                    <h2>Mary Johnson</h2>
+                    <p>“Excellent customer service! They were very supportive throughout.”</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </article>
+            </div>
+        </section>
+
+        <section class="submit-review">
+            <h2>Leave a Review</h2>
+            <form id="reviewForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" required placeholder="Enter your name">
+
+                <label for="review">Your Review:</label>
+                <textarea id="review" rows="4" required placeholder="Share your experience..."></textarea>
+
+                <label for="rating">Rating:</label>
+                <select id="rating" required>
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                </select>
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Loan Borrowing Service</p>
+    </footer>
+
+    <script src="review.js"></script>
+</body>
+</html>
+

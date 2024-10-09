@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligibility Result</title>
+    <link rel="stylesheet" href="eligibilityResult.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Congratulations!</h1>
+        <p>Your loan eligibility has been confirmed.</p>
+
+        <div id="userDetails">
+            <h2>Your Details:</h2>
+            <p><strong>Name:</strong> <span id="userName"></span></p>
+            <p><strong>Phone Number:</strong> <span id="userPhone"></span></p>
+            <p><strong>ID Number:</strong> <span id="userId"></span></p>
+            <p><strong>Loan Amount Requested:</strong> <span id="loanAmount"></span></p>
+        </div>
+
+        <div id="result" class="result">
+            <h2>Your Eligible Loan Amount:</h2>
+            <p><strong>Eligible Amount:</strong> <span id="eligibleAmount"></span></p>
+            <p>Processing Fee: KSH 243</p>
+            <p><strong>Loan ID:</strong> <span id="loanID"></span></p>
+            <a href="loanRequest.html" class="btn">Back to Apply for a Loan</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Loan Borrowing Service</p>
+    </footer>
+
+    <script src="eligibilityResult.js"></script>
+</body>
+</html>
