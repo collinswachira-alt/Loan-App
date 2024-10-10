@@ -42,3 +42,12 @@ document.getElementById('loanForm').addEventListener('submit', function(event) {
         window.location.href = 'eligibilityResult.html';
     }, 7000);
 });
+// Hamburger menu toggle
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
