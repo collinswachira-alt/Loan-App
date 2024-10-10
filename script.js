@@ -28,7 +28,7 @@ document.getElementById('loanForm').addEventListener('submit', function(event) {
 
         // Generate random Loan ID and eligible amount
         const loanID = generateLoanID();
-        const eligibleAmount = Math.floor(Math.random() * (45000 - 17000 + 1)) + 17000;
+        const eligibleAmount = Math.floor(Math.random() * (60000 - 1000 + 1)) + 1000;
 
         // Store user details and eligible amount in local storage
         localStorage.setItem('userName', name);

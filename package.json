@@ -1,0 +1,25 @@
+{
+  "name": "loan-app",
+  "version": "1.0.0",
+  "description": ".This is an overnight project.  .It is a simple loaning server that I intend to integrate Daraja API and other useful and open resources.",
+  "main": "confirmation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collinswachira-alt/Loan-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/collinswachira-alt/Loan-App/issues"
+  },
+  "homepage": "https://github.com/collinswachira-alt/Loan-App#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "request": "^2.88.2"
+  }
+}
