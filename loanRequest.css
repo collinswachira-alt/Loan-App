@@ -9,6 +9,7 @@ nav {
     background: #333;
     color: #fff;
     padding: 1rem;
+    border-radius: 9px;
 }
 
 nav ul {
@@ -96,6 +97,7 @@ footer {
     color: #fff;
     padding: 1rem;
     margin-top: 2rem;
+    border-radius: 12px;
 }
 
 @media (max-width: 600px) {

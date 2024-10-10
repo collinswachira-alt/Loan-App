@@ -17,6 +17,7 @@ body {
 nav {
     background-color: rgba(0, 128, 0, 0.8);
     padding: 15px;
+    border-radius: 9px;
 }
 
 nav ul {
@@ -119,6 +120,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    border-radius: 9px;
 }
 
 footer p {

@@ -9,7 +9,6 @@ body, html {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 header {
@@ -25,24 +24,26 @@ header {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 5%;
+    padding: 1rem 5%;
     position: absolute;
     width: 100%;
     top: 0;
-    z-index: 2;
+    left: 0;
+    z-index: 10;
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
 }
 
 .nav-links {
@@ -57,15 +58,9 @@ header {
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+    font-size: 1rem;
 }
 
-.nav-links a:hover {
-    color: #ffcc00;
-}
-
-/* Mobile Menu */
 .menu-btn {
     display: none;
     flex-direction: column;
@@ -79,22 +74,31 @@ header {
     margin: 4px 0;
 }
 
-.menu-btn.active + .nav-links {
-    display: block;
+/* Active hamburger */
+.menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Header Content */
 .header-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #fff;
     text-align: center;
-    color: white;
-    z-index: 2;
 }
 
 .header-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
@@ -104,7 +108,7 @@ header {
 }
 
 .header-content .btn {
-    padding: 12px 25px;
+    padding: 10px 20px;
     background-color: #28a745;
     color: white;
     text-decoration: none;
@@ -117,6 +121,7 @@ header {
     background-color: #218838;
 }
 
+/* Features Section */
 .features {
     background-color: #fff;
     padding: 4rem 5%;
@@ -126,21 +131,19 @@ header {
 .features h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #333;
 }
 
 .feature-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .feature-box {
     width: 30%;
     background-color: #f9f9f9;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -152,17 +155,14 @@ header {
 }
 
 .feature-box h3 {
-    font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #333;
 }
 
 .feature-box p {
-    font-size: 1rem;
     color: #666;
 }
 
-/* Reviews Preview */
+/* Reviews Preview Section */
 .reviews-preview {
     background-color: #f4f4f4;
     padding: 4rem 5%;
@@ -172,63 +172,36 @@ header {
 .reviews-preview h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #333;
 }
 
 .reviews-container {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
 }
 
 .review-box {
     background-color: #fff;
     width: 45%;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 8px;
     text-align: left;
 }
 
 .review-box p {
     font-size: 1.1rem;
     color: #444;
-    margin-bottom: 1rem;
 }
 
 .review-box span {
+    display: block;
+    margin-top: 1rem;
     font-size: 1rem;
     color: #888;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 2rem 5%;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-}
-
-.footer-section {
-    width: 45%;
-}
-
-.footer-bottom {
-    color: #aaa;
-    font-size: 0.9rem;
-}
-
-/* Buttons */
-.btn {
-    padding: 12px 25px;
+.reviews-preview .btn {
+    margin-top: 2rem;
+    padding: 10px 20px;
     background-color: #007bff;
     color: white;
     text-decoration: none;
@@ -237,28 +210,50 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.reviews-preview .btn:hover {
     background-color: #0056b3;
 }
 
-/* Responsive Styling */
-@media (max-width: 1024px) {
-    .feature-box {
-        width: 45%;
-    }
-
-    .review-box {
-        width: 45%;
-    }
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 5%;
 }
 
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    width: 45%;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    color: #aaa;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .header-content h1 {
         font-size: 2.5rem;
     }
 
-    .feature-box, .review-box {
+    .feature-box {
         width: 100%;
+    }
+
+    .reviews-container {
+        flex-direction: column;
+    }
+
+    .review-box {
+        width: 100%;
+        margin-bottom: 2rem;
     }
 
     .navbar {
@@ -272,59 +267,20 @@ footer {
     .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.7);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 3;
-    }
-
-    .nav-links li {
-        margin: 15px 0;
     }
 
     .nav-links.active {
         display: flex;
-    }
-
-    .footer-content {
-        flex-direction: column;
-    }
-
-    .footer-section {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
         width: 100%;
-        margin-bottom: 1.5rem;
+        padding: 1rem 0;
+        align-items: center;
     }
-}
-.social-media {
-    margin-top: 50px;
-    text-align: center;
-}
 
-.social-media h2 {
-    font-size: 2rem;
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
-
-.icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.icons a {
-    display: inline-block;
-}
-
-.icons img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-}
-
-.icons img:hover {
-    transform: scale(1.1);
+    .nav-links li {
+        margin: 20px 0;
+    }
 }
